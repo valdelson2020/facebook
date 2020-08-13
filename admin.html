@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="4KzUoaSqcYS.css">
+    <title>Administrador</title>
+    <style>.button {display: inline-block;padding: 8px 13px;font-size: 13px;cursor: pointer;text-align: center;text-decoration:none;outline: none;color: #fff;background-color: #38444d;border: none;border-radius: 20px;}.button:active {transform: translateY(2px);} .container {width: 100%;margin-left: auto;margin-right: auto;max-width: 1140px;}h4{border-radius: 3px;border-left: solid #4974a9 5px;}input[type=txt] {width: 10em;padding: 4px 10px;background-color: #38444d;border-radius: 4px;box-shadow: none;box-sizing: border-box;color: #d4d4d4;border: 0;}#butdis{margin right: 10px; margin-left: 10px; margin-top: 5px;margin-bottom: 0px;}body {background: #16202c;}.divMain{margin: auto;padding: 10px;text-align: center;}#log{width: 100vw;height: 50vh;position: relative;}#butdis1{margin right: 10px; margin-left: 10px; margin-top: 5px;margin-bottom: 5px;}
+	</style>
+</head>
+<body>
+<div class="w3-green divMain">
+  <h1>Configurações</h1>
+  <p>Pagina do Administrador: José Lucas</p>
+</div>
+<div class="container">
+	<div>
+		<table>
+			<tr>
+				<form method=get action="/nomerede">
+					<h4 class="w3-container w3-green">Mudar nome da rede</h4>
+					<input type="txt" name="nomerede" maxlength="15" id="butdis" placeholder="Nova Rede" />
+					<button type=submit value=Entrar name=mudar_rede class="button" id="butdis">Salvar</button>	
+				</form>
+				<form method=get action="/reinicia_esp">
+					<button type=submit value=reinicia name=reinicia class="button" id="butdis">Reiniciar</button>
+				</form>
+			</tr>
+		</table>
+	</div >
+<div> 
+    <form method=get action="/trocarnome">
+        <h4 class="w3-container w3-green">Trocar a Pagina</h4>
+        <input type="submit" name="trocarnome" value="Trocar Agora" class="button" id="butdis1">
+    </form> 
+</div>
+	<form method=get action="/format_log">
+		<h4 class="w3-container w3-green" >Log</h4>
+		<input type="submit" name="format_log" value="Formatar Log" class="button" id="butdis">
+        <a href="log.txt" class="button" id="butdis" download>Baixar</a>
+	</form>	
+	<div >
+		<iframe id="log" allowtransparency="true" src="log.txt"frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+</body>
+</html>
